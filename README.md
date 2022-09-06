@@ -1,11 +1,53 @@
-# Start your own "Can of Books" App
 
-This repository has starter code to begin work on creating your own online bookshelf.
 
-## What can books do?
+# Project Name :canned books
+Author: Lujain Al-Jarrah Version: 1.0.0
 
-Books are life-changing. They have the power to enlighten, educate, entertain, heal, and help us grow. Build out this code base to create an web app to track what books have impacted you, and what's recommended to read next.
+ # Overview
+Books project, the use can add, delete, and update his books
 
-## Use this template
+# Getting Started
+create an website without user intraction
+add form to add book, add delete button
+add button to update book
+Architecture
+React, JS
 
-Clone this repo to your own account with the green "Use this template" button. Then, add any collaborators. Now you are ready to start adding features! Deploy your site to let the world know which books have had the greatest impact on you, and what's recommended. Enjoy!
+# Change Log
+06-09-2022 6:00pm - Application now has a fully-functional express server, with a GET, POST, and DElETE route
+06-09-2022 7:50pm - Application now has a fully-functional express server, with a GET, POST, PUT and DElETE route
+
+
+# Estimates
+**Name of feature:** create website, connect mongo
+
+Estimate of time needed to complete: 1h
+
+Start time: 9:00pm
+
+Finish time: 10:30pm
+
+Actual time needed to complete:1:30
+
+**Name of feature:** add POST, DELETE route
+
+Estimate of time needed to complete: 1h
+
+Start time: 7:30am
+
+Finish time: 8:20 am
+
+Actual time needed to complete: 50 min
+
+**Name of feature:** add PUT route
+
+Estimate of time needed to complete: 15min
+
+Start time: 7:30pm
+
+Finish time: 7:50 m
+
+Actual time needed to complete: 20 min
+
+# Credit and Collaborations
+[bayan bushnaq](https://github.com/BayanBushnaq)

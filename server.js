@@ -55,7 +55,7 @@ app.get("/books",bookHandler)
 app.post("/books",getBook)
 app.delete("/books/:id",deletebook) //you can name it whatever you want (lujain instead of id) and you can put it
 //in query like this ? but developer but it i  url
-
+app.put("/books/:id",updateBook)
 
 
 //function
@@ -120,6 +120,29 @@ function deletebook(req,res){
 
   })
 
+}
+//http://localhost:3001/books
+function updateBook(req,res){
+  const id = req.params.id;
+  const {title,description,status} = req.body; //notice here the shortcut
+  bookModel.findByIdAndUpdate(id,{title,description,status},(err,result)=>{
+    if(err) {
+      console.log(err);
+  }
+  else{
+    bookModel.find({},(err,result)=>{
+      if(err)
+      {
+          console.log(err);
+      }
+      else
+      {
+          // console.log(result);
+          res.send(result); //send all result after updating if we put n else only this line it will send th updated one only
+      }
+    })
+  }
+  })
 }
 
 
