@@ -40,6 +40,8 @@ await thirdBook.save();
 }
 
 //seedData()
+
+
 //Route
 app.get('/test', (request, response) => {
 
@@ -49,6 +51,9 @@ app.get('/test', (request, response) => {
 
 //http://localhost:3001/books
 app.get("/books",bookHandler)
+app.post("/books",getBook)
+
+
 
 //function
  function bookHandler(req,res){
@@ -65,10 +70,27 @@ else
     res.send(result);
 
 }
+})}
 
-}
-)
+async function getBook (req,res){
+  const {title,description,status}=req.body
+  await bookModel.create({
+    title: title,
+    description: description,
+    status: status,
+  })
 
+  bookModel.find({},(err,result)=>{
+    if(err)
+    {
+        console.log(err);
+    }
+    else
+    {
+        // console.log(result);
+        res.send(result);
+    }
+  } )
 }
 
 app.listen(PORT, () => console.log(`listening on ${PORT}`));
