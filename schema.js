@@ -6,6 +6,7 @@ const Book = new mongoose.Schema({
   title: String,
   description: String,
   status: String,
+  email:String,
 });
 
 const bookModel = mongoose.model('Bookcaned', Book);
